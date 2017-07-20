@@ -1,1 +1,3 @@
-console.log('Hello Webpack Academy!');
+import fooStr from './foo.js';
+
+console.log(fooStr);
