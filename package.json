@@ -1,12 +1,13 @@
 {
-	"name": "webpack-academy",
-	"version": "1.0.0",
-	"private": true,
-	"scripts": {
-		"build": "webpack",
-		"watch": "webpack --watch"
-	},
-	"devDependencies": {
-		"webpack": "^3.3.0"
-	}
+  "name": "webpack-academy",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "file-loader": "^0.11.2",
+    "webpack": "^3.3.0"
+  }
 }
