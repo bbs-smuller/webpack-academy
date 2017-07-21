@@ -1,3 +1,5 @@
-import fooStr from './foo.js';
+import foo from './foo';
+import bar from './bar-cjs';
 
-console.log(fooStr);
+console.log(foo);
+console.log(bar);
