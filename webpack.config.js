@@ -11,14 +11,31 @@ module.exports = {
 			{
 				test: /\.js$/,
 				use: [
-					'babel-loader'
+					{
+						loader: 'babel-loader'
+					}
 				]
 			},
 			{
 				test: /\.css$/,
 				use: [
-					'style-loader',
-					'css-loader'
+					{
+						loader: 'style-loader'
+					},
+					{
+						loader: 'css-loader'
+					}
+				]
+			},
+			{
+				test: /\.jpeg$/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							limit: 10000
+						}
+					}
 				]
 			}
 		]
