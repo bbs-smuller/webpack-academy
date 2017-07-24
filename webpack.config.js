@@ -1,6 +1,5 @@
 const Path = require('path');
-const Webpack = require('webpack');
-const ExamplePlugin = require('./ExamplePlugin');
+const ClearDistPlugin = require('./ClearDist');
 
 module.exports = {
 	entry: './src/index.js',
@@ -14,15 +13,16 @@ module.exports = {
 				test: /\.jpe?g$/,
 				use: [
 					{
-						loader: 'file-loader'
+						loader: 'file-loader',
+						query: {
+							name: '[name]-[hash].[ext]'
+						}
 					}
 				]
 			}
 		]
 	},
 	plugins: [
-		new ExamplePlugin(),
-		new Webpack.optimize.UglifyJsPlugin(),
-		new Webpack.ContextReplacementPlugin()
+		new ClearDistPlugin()
 	]
 }
